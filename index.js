@@ -1,15 +1,24 @@
+// Modules and Globals
+require('dotenv').config()
 const express = require('express')
 const app = express()
-require('dotenv').config()
 
-app.use('/places',require('./controllers/places'))
+// Express Settings
+app.set('views', __dirname + '/views')
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
+app.use(express.static('public'))
 
-app.get('/',(req,res) => {
-    res.send('hello world')
+// Controllers & Routes
+app.use('/places', require('./controllers/places'))
+
+app.get('/', (req, res) => {
+    res.render('home')
 })
 
-app.get('*',(req,res) => {
-    res.status(404).send('404 Not the right page :)')
+app.get('*', (req, res) => {
+    res.render('error404')
 })
 
+// Listen for Connections
 app.listen(process.env.PORT)
