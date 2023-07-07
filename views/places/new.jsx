@@ -5,38 +5,31 @@ function new_form() {
     return (
         <Def>
             <h1>Add a New Place</h1>
-            <form method="POST" action="/places">
-                <div className="form-group">
-                    <label htmlFor="name">Place Name</label>
-                    <input className="form-control" id="name" name="name" required />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="pic">Place Picture</label>
-                    <input className="form-control" id="pic" name="pic" />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="city">City</label>
-                    <input className="form-control" id="city" name="city" />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="state">State</label>
-                    <input className="form-control" id="state" name="state" />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="cuisines">Cuisines</label>
-                    <input className="form-control" id="cuisines" name="cuisines" required />
-                </div>
-                <div className="form-group">
-                    <label for="founded">Founded Year</label>
-                    <input className="form-control" id="founded" name="founded" />
-                </div>
-                <input className="btn btn-primary" type="submit" value="Add Place" />
+            <form action="/places" method="POST">
+
+                <label htmlFor="name">Place Name</label>
+                <input type="text" id="name" name="name" required />
+
+                 <label htmlFor="pic">Place Picture</label>
+                <input type="text" id="pic" />
+
+                <label htmlFor="city">City</label>
+                <input id="city"/>
+
+                <label htmlFor="state">State</label>
+                <input type="text" id="state" />
+
+                <label htmlFor="cuisines">Cuisines</label>
+                <input type="text" id="cuisines" required />
+
+                <label htmlFor="founded">Founded Year</label>
+                <input type="text"  id="founded" />
+                <br />
+                <input  type="submit" value="Add Place" />
             </form>
-            <div className="btn btn-primary">
-                <a href="/breads">
+                <a href="/places">
                     <button>Go back to the index</button>
                 </a>
-            </div>
         </Def>
     );
 }

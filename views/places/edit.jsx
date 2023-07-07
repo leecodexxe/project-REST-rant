@@ -2,7 +2,6 @@ const React = require('react')
 const Def = require('../layout/default')
 
 function edit_form(data) {
-    console.log(data)
     return (
         <Def>
             <form method="POST" action={`/places/${data.id}?_method=PUT`}>
