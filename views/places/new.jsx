@@ -8,22 +8,22 @@ function new_form() {
             <form action="/places" method="POST">
 
                 <label htmlFor="name">Place Name</label>
-                <input type="text" id="name" name="name" required />
+                <input  id="name" name="name" required />
 
                  <label htmlFor="pic">Place Picture</label>
-                <input type="text" id="pic" />
+                <input  id="pic" name="pic"/>
 
                 <label htmlFor="city">City</label>
-                <input id="city"/>
+                <input id="city" name="city"/>
 
                 <label htmlFor="state">State</label>
-                <input type="text" id="state" />
+                <input  id="state" name="state" />
 
                 <label htmlFor="cuisines">Cuisines</label>
-                <input type="text" id="cuisines" required />
+                <input  id="cuisines" name="cuisines"required />
 
                 <label htmlFor="founded">Founded Year</label>
-                <input type="text"  id="founded" />
+                <input  id="founded" name="founded"/>
                 <br />
                 <input  type="submit" value="Add Place" />
             </form>
