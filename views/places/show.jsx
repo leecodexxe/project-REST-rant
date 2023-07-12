@@ -22,9 +22,11 @@ function show({data}) {
             <h3>Not Rated</h3>
             <h2>Descroption</h2>
             <h3>
-              Located in {data.city},{data.state} and serving{" "}
-              {data.cuisines}
+              {data.showEstablished()}
             </h3>
+            <h4>
+              Serving {data.cuisines}
+            </h4>
           </div>
           <div className="comment">
             <h2>Comments</h2>

@@ -8,28 +8,28 @@ function new_form() {
             <form action="/places" method="POST">
 
                 <label htmlFor="name">Place Name</label>
-                <input  id="name" name="name" required />
+                <input id="name" name="name" required />
 
-                 <label htmlFor="pic">Place Picture</label>
-                <input  id="pic" name="pic"/>
+                <label htmlFor="pic">Place Picture</label>
+                <input id="pic" name="pic" />
 
                 <label htmlFor="city">City</label>
-                <input id="city" name="city"/>
+                <input id="city" name="city" />
 
                 <label htmlFor="state">State</label>
-                <input  id="state" name="state" />
+                <input id="state" name="state" />
 
                 <label htmlFor="cuisines">Cuisines</label>
-                <input  id="cuisines" name="cuisines"required />
+                <input id="cuisines" name="cuisines" required />
 
                 <label htmlFor="founded">Founded Year</label>
-                <input  id="founded" name="founded"/>
+                <input type="number" className="form_control" id="founded" name="founded" value={new Date().getFullYear()} />
                 <br />
-                <input  type="submit" value="Add Place" />
+                <input type="submit" value="Add Place" />
             </form>
-                <a href="/places">
-                    <button>Go back to the index</button>
-                </a>
+            <a href="/places">
+                <button>Go back to the index</button>
+            </a>
         </Def>
     );
 }

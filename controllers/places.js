@@ -1,6 +1,6 @@
 const router = require('express').Router()
-const Place = require('../models')
-const places = require('../models/places')
+const places = require('../models/place')
+const SeedData = require('../seeders/seed-places')
 
 //place home page
 router.get('/', (req, res) => {
@@ -94,6 +94,12 @@ router.put('/:id', (req, res) => {
   }
 })
 
+
+//seed
+router.get('/data/seed',(req,res) => {
+  places.insertMany(SeedData)
+        .then(res.redirect('/places'))
+})
 
 
 
