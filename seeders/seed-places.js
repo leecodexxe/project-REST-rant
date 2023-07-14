@@ -1,4 +1,6 @@
-module.exports = ([{
+const db = require('../models')
+
+db.Place.create([{
     name: 'H-Thai-ML',
     city: 'Seattle',
     state: 'WA',
@@ -13,3 +15,11 @@ module.exports = ([{
     pic: '/images/coffee-cat.jpg',
     founded: 2020
 }])
+.then(() => {
+    console.log('Success!')
+    process.exit()
+})
+.catch(err => {
+    console.log('Failure!', err)
+    process.exit()
+})

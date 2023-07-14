@@ -1,17 +1,15 @@
 const React = require('react')
+const Def = require('./default')
 
-function error404 (html) {
+function error404 () {
     return (
-        <html>
-            <head>
-                <title>Title</title>
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
-            </head>
-            <body>
+        <Def>
+            <main>
                 <h1>404: Page not found</h1>
-                <img src="https://cdn.theatlantic.com/thumbor/B7U27JF25tScMZkCe5Pl9EqXjao=/0x131:2555x1568/960x540/media/img/mt/2017/06/shutterstock_319985324/original.jpg" alt="" />
-            </body>
-        </html>
+                <p>Oops, sorry we can't find this page!</p>
+                <img src="http://placekitten.com/500/500" alt="Cat that is very sorry he can't find your page" />
+            </main>
+        </Def>
     )
 }
 
